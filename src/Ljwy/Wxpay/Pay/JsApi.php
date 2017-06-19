@@ -3,6 +3,7 @@ namespace Ljwy\Wxpay\Pay;
 
 use Ljwy\Wxpay\Facades\Wxpay;
 use Ljwy\Wxpay\WxpayException;
+use Ljwy\Wxpay\Sdk\Api;
 
 /**
  *
@@ -81,7 +82,7 @@ class JsApi
 		if (! array_key_exists('appid', $UnifiedOrderResult) || ! array_key_exists('prepay_id', $UnifiedOrderResult) || $UnifiedOrderResult['prepay_id'] == '') {
 			throw new WxPayException('参数错误');
 		}
-		$jsapi = new WxPayJsApiPay();
+		$jsapi = new JsApiPay();
 		$jsapi->setAppid($UnifiedOrderResult['appid']);
 		$timeStamp = time();
 		$jsapi->setTimeStamp($timeStamp);
