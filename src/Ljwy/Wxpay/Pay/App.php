@@ -1,8 +1,10 @@
 <?php
 namespace Ljwy\Wxpay\Pay;
 
-use Ljwy\Wxpay\Facades\Wxpay;
 use Ljwy\Wxpay\WxpayException;
+use Ljwy\Wxpay\Sdk\Api;
+use Ljwy\Wxpay\Models\JsApiPay;
+use Ljwy\Wxpay\Models\UnifiedOrder;
 
 /**
  *
